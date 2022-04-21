@@ -11,21 +11,21 @@
 
 <body>
     <section class="secform">
-    <form action="{{ url_for('mobile')}}" method="post" class="form">
+    <form action="{{ url_for('mobile')}}" method="post" class="form" >
         <label for = "touch_screen">Touch screen:&nbsp;</label>
-        <select name="touch_screen">
+        <select name="touch_screen" required>
             <option value="1">Yes</option>
             <option value="0">No</option>
         </select>
         <br><br>
         <label for = "Three_g"> Three g: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
-        <select name="Three_g">
+        <select name="Three_g" required>
             <option value="1">Yes</option>
             <option value="0">No</option>
         </select>
         <br><br>
         <label for = "dual_sim">Dual Sim:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
-        <select name="dual_sim">
+        <select name="dual_sim" required>
             <option value="1">Yes</option>
             <option value="0">No</option>
         </select>
@@ -37,13 +37,13 @@
         <input type="number" name="pxh",id="pxh">
         <br><br>
         <label>Pixel Width: &nbsp;&nbsp;&nbsp;</label>
-        <input type="number" name="pxw",id="pxw">
+        <input type="number" name="pxw",id="pxw" required>
         <br><br>
         <label>No of cores:&nbsp;&nbsp;&nbsp;&nbsp;</label>
         <input type="number" name="ncore",id="ncore">
         <br><br>
         <label>Mobile Weight:&nbsp;&nbsp;</label>
-        <input type="number" name="mwt",id="mwt">
+        <input type="number" name="mwt",id="mwt" required>
 
         <br><br>
         <label>battery Life &nbsp;&nbsp;&nbsp;&nbsp;</label>
@@ -51,26 +51,9 @@
 
         <br><br>
         <div class="result" align="center">
-            {%if result==0 %}
-            {% for variable, value in original_input.items() %}
-            <br><b>{{ variable }}</b> : {{ value }}
-            {% endfor %}
-            <br>
-            <br> Loan Decision:
-            <p style="font-size:20px">{{ result }}</p>
-            {% endif %}
-
-            {% if result %}
-            {% for variable, value in original_input.items() %}
-            <br><b>{{ variable }}</b> : {{ value }}
-            {% endfor %}
-            <br>
-            <br> Loan Decision:
-            <p style="font-size:20px">{{ result }}</p>
-            {% endif %}
-    </div>
-    <button type="submit">Submit</button>
-    
+                </div>
+    <a href=" http://127.0.0.1:5000/result"><button type="submit">Submit</button>
+    </a>
 </form>
     </section>
 

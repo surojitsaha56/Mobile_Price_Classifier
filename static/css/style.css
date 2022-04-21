@@ -1,11 +1,11 @@
 .form{
-    background-color:#008ECC ;
+    background-color:#ff54a2 ;
     border-style: 2px solid;
     padding: 10%;
     text-align: center;
 }
 input:hover,select:hover{
-    background-color:#07709dd5;
+    background-color:#ff575a;
     
 }
 label{
