@@ -42,9 +42,9 @@ with open('models/Dtree.pickle', 'rb') as f:
 
 
 app = flask.Flask(__name__, template_folder='templates')
-# @app.route('/')
-# def main():
-#     return (flask.render_template('index.html'))
+@app.route('/', methods = ['GET', 'POST'])
+def main():
+        return flask.render_template('home.html')
 
 # @app.route('/report')
 # def report():
@@ -55,7 +55,7 @@ app = flask.Flask(__name__, template_folder='templates')
 #     return (flask.render_template('jointreport.html'))
 
 
-@app.route("/", methods=['GET', 'POST'])
+@app.route("/mobile", methods=['GET', 'POST'])
 def mobile():
     
     if flask.request.method == 'GET':
