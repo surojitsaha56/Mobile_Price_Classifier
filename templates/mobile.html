@@ -20,8 +20,13 @@
 <body>
   
     <section class="secform">
+     
     <form action="{{ url_for('mobile')}}" method="post" class="form" >
+        <h2>ENTER THE SPECIFICATION</h2>
+        <br>
+        
         <label for = "touch_screen">Touch screen:&nbsp;</label>
+
         <select name="touch_screen" required>
             <option value="1">Yes</option>
             <option value="0">No</option>
@@ -56,13 +61,13 @@
 
         <br><br>
         <label>battery Life &nbsp;&nbsp;&nbsp;&nbsp;</label>
-        <input type="number" name="bp",id="bp">
+        <input type="number" name="bp",id="bp" required>
 
         <br><br>
         <div class="result" align="center">
                 </div>
     <!-- <a href=" http://127.0.0.1:5000/result"><button type="submit">Submit</button> -->
-        <a href=" http://127.0.0.1:5000/result"><span class="btn btn-info"><button type="submit">SUBMIT</button></a>
+        <a href=" http://127.0.0.1:5000/result"><button type="submit" class="btn btn-info">SUBMIT</button></a>
     </a>
 </form>
     </section>
