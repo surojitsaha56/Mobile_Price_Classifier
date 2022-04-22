@@ -1,9 +1,18 @@
+body{
+	background:lightgreen; /* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, blue, #ffc371); /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to left, rgb(130, 72, 211), #dfcd2e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+
 .form{
     background-color:#ff54a2 ;
     border-style: 2px solid;
     padding: 10%;
     text-align: center;
 }
+
 input:hover,select:hover{
     background-color:#ff575a;
     

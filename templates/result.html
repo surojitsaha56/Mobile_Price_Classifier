@@ -2,7 +2,7 @@
 <html>
   <head>
    
-
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/result.css') }}">
 
   </head>
   <style>
@@ -10,9 +10,15 @@
           border:1px solid black;
           background-image:url('/pix/samples/bg1.gif');
         }
-        tr:nth-child(even){background-color: #f58082e1;}
-        </style>
-  <center>  <h1>Result</h1></center>
+        tr:nth-child(even){background-color: #eb191ce1;}
+          tr:nth-child(odd){background-color: #cb54568d;
+          }
+        .result{
+
+          color: whitesmoke;
+        }        </style>
+        
+  <center>  <h1>RESULT</h1></center>
     <div class="result" align="center">
         
         <table style="width:50%"> 
@@ -29,6 +35,34 @@
                 <td>{{result}}</td>
             </tr>
         </table>
+<!-- 
+        <div class="donation-table-container">
+          <ul class="responsive-table">
+
+            {%for key,value in original_input.items()%}
+            <tr>
+                <th>{{key}}</th>
+                <td>{{value}}</td>
+                
+            </tr>
+            
+            {%endfor%}
+            <tr>
+                <th>Decision</th>
+                <td>{{result}}</td>
+            </tr>
+          
+           
+          </ul>
+        </div> -->
+      </div>
+
+
+
+
+
+
+
 
 
 </html>

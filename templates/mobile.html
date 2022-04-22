@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RESULT PAGE</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+    <link href="https://fonts.googleapis.com/css?family=Aguafina+Script|Dancing+Script|Kaushan+Script|Open+Sans|Petit+Formal+Script|Pinyon+Script|Roboto|Rouge+Script" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="static\css\style.css">
 </head>
 <!-- f=df[['touch_screen','three_g','ram','px_width','px_height','n_cores','mobile_wt','dual_sim','battery_power']] -->
 
 <body>
+  
     <section class="secform">
     <form action="{{ url_for('mobile')}}" method="post" class="form" >
         <label for = "touch_screen">Touch screen:&nbsp;</label>
@@ -52,10 +61,11 @@
         <br><br>
         <div class="result" align="center">
                 </div>
-    <a href=" http://127.0.0.1:5000/result"><button type="submit">Submit</button>
+    <!-- <a href=" http://127.0.0.1:5000/result"><button type="submit">Submit</button> -->
+        <a href=" http://127.0.0.1:5000/result"><span class="btn btn-info"><button type="submit">SUBMIT</button></a>
     </a>
 </form>
     </section>
-
+  
 </body>
 </html>
