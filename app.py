@@ -4,6 +4,10 @@ import pickle
 import pandas as pd
 import numpy as np
 
+import random
+
+
+
 
 from sklearn.preprocessing import StandardScaler
 
@@ -67,16 +71,6 @@ def mobile():
         output_dict['mobile_wt'] = weight
         output_dict['dual_sim'] = dual_sim
         output_dict['battery_power'] = battery
-        # x =[0,0,0,0,0,0,0,0,0]
-        # x[0] = touch_screen
-        # x[1] = three_g
-        # x[2] = ram
-        # x[3] = width
-        # x[4] = height
-        # x[5] = ncore
-        # x[6] = weight
-        # x[7] = dual_sim
-        # x[8] = battery
         
         x=np.array([touch_screen,three_g,ram,width,height,ncore,weight,dual_sim,battery])
         
@@ -85,10 +79,24 @@ def mobile():
         print('------------------------------------------')
 
         pred = clf_dtree.predict([x])
-        print("Cnograts",clf_dtree.predict([x]))
+
+        price = 0
+        #Predicting price
+        if pred == [0]:
+            price = random.randrange(5000, 7000, 500)
+        elif pred == [1]:
+            price = random.randrange(7000, 10000, 500)
+        elif pred == [2]:
+            price = random.randrange(10000, 15000, 500)
+        else:
+            price = random.randrange(15000, 30000, 500)
+
+
+        print("Congrats",clf_dtree.predict([x]))
+        
         return flask.render_template('result.html', 
                                      original_input=output_dict,
-                                     result = pred,)
+                                     result = pred, price = price)
 
 
         
