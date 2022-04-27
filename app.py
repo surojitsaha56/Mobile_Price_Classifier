@@ -62,15 +62,15 @@ def mobile():
         battery = flask.request.form.get('bp')
         print(battery,ram)
         output_dict = dict()
-        output_dict['touch_screen'] = touch_screen
-        output_dict['three_g'] = three_g
-        output_dict['ram'] = ram
-        output_dict['px_width'] = width
-        output_dict['px_height'] = height
-        output_dict['n_cores'] = ncore
-        output_dict['mobile_wt'] = weight
-        output_dict['dual_sim'] = dual_sim
-        output_dict['battery_power'] = battery
+        output_dict['Touch_Screen'] = touch_screen
+        output_dict['3G'] = three_g
+        output_dict['RAM (MB)'] = ram
+        output_dict['Pixel_Width'] = width
+        output_dict['Pixel_Height'] = height
+        output_dict['Number_of_Cores'] = ncore
+        output_dict['Mobile_weight (gms)'] = weight
+        output_dict['Dual_Sim'] = dual_sim
+        output_dict['Battery_Power (mAh)'] = battery
         
         x=np.array([touch_screen,three_g,ram,width,height,ncore,weight,dual_sim,battery])
         
